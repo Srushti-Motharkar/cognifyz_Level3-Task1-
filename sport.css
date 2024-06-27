@@ -1,0 +1,165 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.header h1{
+    font-style: italic;
+    color: rgb(65, 22, 105);
+    container: 10px;
+    padding: 2px;
+    text-align: center;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: #333;
+    color: white;
+    padding: 0 20px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+  font-size:20px;
+}
+
+li {
+    margin-right:30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+   
+}
+
+.logo a:hover {
+    background-color: black;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+
+
+
+.gallery {
+    margin: 40px;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 50px;
+    bottom: auto;
+}
+.gallery img{
+  height:500px;
+  width:500px;
+}
+
+.thumbnail {
+    flex: 1 1 calc(30.333% - 20px);
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ccc;
+    transition: border 0.3s;
+  filter:space-between(100%);
+  transition:1s;
+}
+.gallery img:hover{
+  filter:grayscale(0);
+  transform:scale(2.2);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.lightbox .close::before {
+    content: '\00d7'; /* Unicode character for 'X' */
+}
+
+.lightbox .prev, .lightbox .next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transform: translateY(-50%);
+}
+
+.lightbox .prev {
+    left: 20px;
+}
+
+.lightbox .next {
+    right: 20px;
+}
+
+.lightbox .prev::before {
+    content: '\276E'; /* Unicode character for left arrow */
+}
+
+.lightbox .next::before {
+    content: '\276F'; /* Unicode character for right arrow */
+}
+.home button{
+    background-color: rgb(93, 7, 93);
+    color: #ccc;
+
+    font-style: italic;
+    
+}
